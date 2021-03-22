@@ -10,12 +10,12 @@ import ReportRow from "./ReportRow";
 import ReportDetail from "./ReportDetail";
 
 function ReportList({
-                        reports,
-                        error
+    isLoading, reports, error, findAllReportAction
                     }) {
 
     const onReload = () => {
         findAllReportAction();
+        console.log("ini data", reports)
     }
 
     useEffect(onReload, [findAllReportAction])
@@ -64,6 +64,7 @@ function ReportList({
                                                             </tr>
                                                             <tr>
                                                                 <th>No</th>
+                                                                <th>Approval</th>
                                                                 <th>Name</th>
                                                                 <th>Email</th>
                                                                 <th>Id Number</th>
@@ -87,7 +88,17 @@ function ReportList({
                                                             </thead>
                                                             <tbody>
                                                             {
-                                                                <ReportRow/>
+                                                                ! isLoading ?
+                                                                    reports?.list?.map((e,i) => {
+                                                                        return (
+                                                                            <ReportRow key={i} data={e}
+                                                                            number={(reports.page * reports.size) + 1 + i}/>
+                                                                        )
+                                                                    }) :
+                                                                    <tr>
+                                                                        <td> Loading ...</td>
+                                                                    </tr>
+
                                                             }
                                                             </tbody>
                                                         </table>
@@ -115,8 +126,9 @@ function ReportList({
 
 const mapStateToProps = (state) => {
     return {
-        reports: state.findAllReportReducer.data,
-        error: state.findAllReportReducer.error
+        reports: state.findAllReportReducer.data || [],
+        error: state.findAllReportReducer.error,
+        isLoading: state.findAllReportReducer.isLoading
     }
 }
 
