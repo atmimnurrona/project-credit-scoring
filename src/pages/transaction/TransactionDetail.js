@@ -6,6 +6,7 @@ import Header from "../../components/dashboard/Header";
 import Menu from "../../components/dashboard/Menu";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSave} from "@fortawesome/free-solid-svg-icons";
+import  NumberFormat from "react-number-format"
 import {Button} from "reactstrap";
 
 
@@ -37,7 +38,7 @@ function TransactionDetail({findByIdDispatch, transaction, isLoading}) {
                             <Header/>
                             <Menu/>
                             <div className="content-wrapper">
-                                <div className="content-header">
+                                    <div className="content-header">
                                     <div className="container-fluid">
                                         <div className="row mb-2">
                                             <div className="col-sm-6">
@@ -77,15 +78,15 @@ function TransactionDetail({findByIdDispatch, transaction, isLoading}) {
                                                             </tr>
                                                             <tr>
                                                                 <td>Income</td>
-                                                                <td>Rp {data.income}</td>
+                                                                <td><NumberFormat value={data.income} displayType={'text'} thousandSeparator={true} prefix={'Rp'} /></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Outcome</td>
-                                                                <td>Rp {data.outcome}</td>
+                                                                <td><NumberFormat value={data.outcome} displayType={'text'} thousandSeparator={true} prefix={'Rp'} /></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Loan</td>
-                                                                <td>Rp {data.loan}</td>
+                                                                <td><NumberFormat value={data.loan} displayType={'text'} thousandSeparator={true} prefix={'Rp'} /></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Tenor</td>
@@ -97,11 +98,11 @@ function TransactionDetail({findByIdDispatch, transaction, isLoading}) {
                                                             </tr>
                                                             <tr>
                                                                 <td>Main Loan</td>
-                                                                <td>Rp {data.mainLoan}</td>
+                                                                <td><NumberFormat value={data.mainLoan} displayType={'text'} thousandSeparator={true} prefix={'Rp'} /></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Interest</td>
-                                                                <td>Rp {data.interest}</td>
+                                                                <td> {data.interest}</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Installment Total</td>

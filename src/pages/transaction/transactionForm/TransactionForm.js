@@ -18,6 +18,8 @@ const TransactionForm = ({savedTransaction, isLoading, error, saveTransactionAct
     const [data, setData] = useState({
         customer: ""
     })
+    const [currency, setCurrency] = useState({})
+
     const history = useHistory()
 
     const handleCustomer = () => {
@@ -57,9 +59,15 @@ const TransactionForm = ({savedTransaction, isLoading, error, saveTransactionAct
         setData({...data, [name]: value})
     }
 
+    const handleCurrency = (e) => {
+        let name = e.target.name
+        let value = e.target.value
+        setCurrency({...currency, [name]: value})
+        setData({...data, [name]: value.split(",").join("")})
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault()
-        setData({...data, income:data.income.split(",").join("")})
         saveTransactionAction(data)
         // console.log(data)
     }
@@ -103,7 +111,7 @@ const TransactionForm = ({savedTransaction, isLoading, error, saveTransactionAct
                                                                         required
                                                                         name="income"
                                                                         id="tanpa-rupiah"
-                                                                        onChange={handleChange}
+                                                                        onChange={handleCurrency}
                                                                         value={data?.income || ''}
                                                                         placeholder="income"
                                                                         thousandSeparator={true}/>
@@ -118,12 +126,14 @@ const TransactionForm = ({savedTransaction, isLoading, error, saveTransactionAct
                                                             <Col sm={10}>
                                                                 <InputGroup>
                                                                     <InputGroupText>Rp</InputGroupText>
-                                                                    <Input required
-                                                                           name="outcome"
-                                                                           onChange={handleChange}
-                                                                           value={data?.outcome || ''}
-                                                                           placeholder="outcome"
-                                                                           type="number" min="0"/>
+                                                                    <NumberFormat
+                                                                        required
+                                                                        name="outcome"
+                                                                        id="tanpa-rupiah"
+                                                                        onChange={handleCurrency}
+                                                                        value={data?.outcome || ''}
+                                                                        placeholder="outcome"
+                                                                        thousandSeparator={true}/>
                                                                     <InputGroupText>.00</InputGroupText>
                                                                 </InputGroup>
                                                             </Col>
@@ -134,12 +144,15 @@ const TransactionForm = ({savedTransaction, isLoading, error, saveTransactionAct
                                                             <Col sm={10}>
                                                                 <InputGroup>
                                                                     <InputGroupText>Rp</InputGroupText>
-                                                                    <Input required
-                                                                           onChange={handleChange}
-                                                                           value={data?.loan || ''}
-                                                                           placeholder="loan"
-                                                                           type="number" min="0"
-                                                                           name="loan"/>
+
+                                                                    <NumberFormat
+                                                                        required
+                                                                        name="loan"
+                                                                        id="tanpa-rupiah"
+                                                                        onChange={handleCurrency}
+                                                                        value={data?.loan || ''}
+                                                                        placeholder="outcome"
+                                                                        thousandSeparator={true}/>
                                                                     <InputGroupText>.00</InputGroupText>
                                                                 </InputGroup>
                                                             </Col>
