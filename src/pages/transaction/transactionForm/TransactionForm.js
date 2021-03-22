@@ -47,7 +47,7 @@ const TransactionForm = ({savedTransaction, isLoading, error, saveTransactionAct
 
     useEffect(() => {
         if (savedTransaction) {
-            history.push('/master/transaction')
+            history.push('/transaction')
         }
     }, [savedTransaction, history])
 

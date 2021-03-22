@@ -82,10 +82,10 @@ function AccountList({
                                     <div className="card-header border-0">
                                         {/*<h3 className="card-title">List Customer</h3>*/}
                                         <div className="card-tools">
-                                            <a href="#" className="btn btn-tool btn-sm">
-                                                <i className="fas fa-download"/>
-                                            </a>
-                                            <a href="/customer/form" className="btn btn-tool btn-sm">
+                                            {/*<a href="#" className="btn btn-tool btn-sm">*/}
+                                            {/*    <i className="fas fa-download"/>*/}
+                                            {/*</a>*/}
+                                            <a href="/register" className="btn btn-tool btn-sm">
                                                 <i className="fas fa-user-plus"/>
                                             </a>
                                         </div>

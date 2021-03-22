@@ -4,7 +4,6 @@ import React, {useEffect} from "react";
 import {connect} from "react-redux";
 import {findAllTransactionAction} from "../../../actions/transactionAction";
 import TransactionRow from "./TransactionRow";
-import HeaderMaster from "../../../components/navbar/NavbarMaster";
 import Header from "../../../components/dashboard/Header";
 import Menu from "../../../components/dashboard/Menu";
 import SignIn from "../../login/SignIn";

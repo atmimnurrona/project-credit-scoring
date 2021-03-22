@@ -107,10 +107,10 @@ const SignIn = ({loginData, isLoading, error, dispatchLoginAction}) => {
                         <img src={undraw_Access_account_re_8spm} alt=""
                              className="img-fluid d-none d-md-block"/>
                              <br/>
-                        <p className="text-muted font-weight-bold">
-                            Have not account yet?
-                            <a href="/register" className="text-primary ml-2">Sign Up</a>
-                        </p>
+                        {/*<p className="text-muted font-weight-bold">*/}
+                        {/*    Have not account yet?*/}
+                        {/*    <a href="/register" className="text-primary ml-2">Sign Up</a>*/}
+                        {/*</p>*/}
                         <hr/>
                     </div>
 

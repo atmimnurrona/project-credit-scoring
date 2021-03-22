@@ -3,7 +3,7 @@ import {Redirect, useHistory, useParams} from 'react-router-dom'
 import undraw_Updated_resume_re_q1or from "../../assets/images/undraw_Updated_resume_re_q1or.svg"
 import {
     faEnvelope,
-    faKey,
+    faKey, faServer,
     faUser,
     faUserCircle
 } from "@fortawesome/free-solid-svg-icons";
@@ -12,6 +12,7 @@ import "./login.css"
 import {Input, Label, FormGroup, Button, Container, Form, Col} from "reactstrap";
 import {findAccountByIdAction, saveAccountAction} from "../../actions/signupAction";
 import {connect} from "react-redux";
+import DropdownList from "../../components/DropdownList/DropdownList";
 
 const SignUp = ({saveDispatch, error, saveAccount, users, update, isLoading}) => {
     const {id} = useParams()
@@ -177,15 +178,18 @@ const SignUp = ({saveDispatch, error, saveAccount, users, update, isLoading}) =>
                                             {/*    <FontAwesomeIcon icon={faServer}/>*/}
                                             {/*</span>*/}
                                             {/*</div>*/}
-                                            {/*<DropdownList*/}
-                                            {/*    data={[*/}
-                                            {/*        {value: "STAFF", label: "STAFF"},*/}
-                                            {/*        {value: "SUPERVISOR", label: "SUPERVISOR"}*/}
-                                            {/*    ]}*/}
-                                            {/*    value={data?.roles[0].name}*/}
-                                            {/*    placeholder="Select Role"*/}
-                                            {/*    handleDropdown={handleRoles}*/}
-                                            {/*/>*/}
+                                            {/*<Col sm={12}>*/}
+                                                <DropdownList
+                                                    data={[
+                                                        {value: "STAFF", label: "STAFF"},
+                                                        {value: "SUPERVISOR", label: "SUPERVISOR"}
+                                                    ]}
+                                                    value={data?.roles}
+                                                    placeholder="Select Role"
+                                                    handleDropdown={handleRoles}
+                                                />
+                                            {/*</Col>*/}
+
 
                                             {/*<select id="job" name="jobtitle"*/}
                                             {/*        className="form-control custom-select bg-white border-left-0 border-md">*/}
@@ -198,10 +202,9 @@ const SignUp = ({saveDispatch, error, saveAccount, users, update, isLoading}) =>
 
                                         <div className="input-group col-lg-12 mb-4">
                                             <FormGroup>
-                                                <Label for="profilePicture" sm={2}>Profile Photo</Label>
-                                                <Col sm={10}>
+                                                <Label for="profilePicture" sm={4}>Profile Photo</Label>
+                                                <Col sm={12}>
                                                     <Input
-                                                        required
                                                         type="file"
                                                         name="profilePicture"
                                                         onChange={handlePhoto}
@@ -217,13 +220,13 @@ const SignUp = ({saveDispatch, error, saveAccount, users, update, isLoading}) =>
                                                   style={{color: "#ffff"}}>CREATE ACCOUNT</span>
                                             </Button>
                                         </div>
-                                        <div>
-                                            <p className="text-muted font-weight-bold">
-                                                Already have account?
-                                                <a href="/" className="text-primary ml-2">Sign In</a>
-                                            </p>
-                                            <hr/>
-                                        </div>
+                                        {/*<div>*/}
+                                        {/*    <p className="text-muted font-weight-bold">*/}
+                                        {/*        Already have account?*/}
+                                        {/*        <a href="/" className="text-primary ml-2">Sign In</a>*/}
+                                        {/*    </p>*/}
+                                        {/*    <hr/>*/}
+                                        {/*</div>*/}
                                     </div>
                                 </Form>
                                 :
