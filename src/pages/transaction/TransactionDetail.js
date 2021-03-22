@@ -19,7 +19,7 @@ function TransactionDetail({findByIdDispatch, transaction, isLoading}) {
 
             setData({...transaction})
         }
-        console.log("ini data", data)
+        console.log("ini data", transaction)
     }, [transaction])
 
     useEffect(() => {
@@ -67,14 +67,14 @@ function TransactionDetail({findByIdDispatch, transaction, isLoading}) {
 
                                                             <tbody style={{textAlign: "left"}}>
 
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Name</td>*/}
-                                                            {/*    <td>{data?.list?.customer.name}</td>*/}
-                                                            {/*</tr>*/}
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Employee Type</td>*/}
-                                                            {/*    <td>{data?.customer.employeeType}</td>*/}
-                                                            {/*</tr>*/}
+                                                            <tr>
+                                                                <td>Name</td>
+                                                                <td>{data?.customer?.name}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Employee Type</td>
+                                                                <td>{data?.customer?.employeeType}</td>
+                                                            </tr>
                                                             <tr>
                                                                 <td>Income</td>
                                                                 <td>Rp {data.income}</td>
@@ -169,7 +169,7 @@ const mapStateToProps = (state) => {
     return {
         isLoading: state.findTransactionByIdReducer.isLoading || state.saveTransactionReducer.loading,
         transaction: state.findTransactionByIdReducer.data || [],
-        customer: state.findCustomerByIdReducer.data
+        // customer: state.findCustomerByIdReducer.data
     }
 }
 
