@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {findByIdTransactionAction} from "../../actions/transactionAction";
 import {connect} from "react-redux";
 import {useParams} from 'react-router-dom'
-import Header from "../Home";
+import Header from "../../components/dashboard/Header";
 import Menu from "../../components/dashboard/Menu";
 
 

@@ -1,6 +1,6 @@
 import React from "react";
 import {useHistory} from "react-router";
-import {faHome, faSignOutAlt, faUsers} from "@fortawesome/free-solid-svg-icons";
+import {faFolderPlus, faHome, faSignOutAlt, faUserPlus, faUsers} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export default function Header() {
@@ -33,11 +33,19 @@ export default function Header() {
       {/* Right navbar links */}
       <ul className="navbar-nav ml-auto">
         {localStorage.getItem("roles") == "MASTER" &&
-        <li className="nav-item">
-          <a className="nav-link" href="/users">
-            <FontAwesomeIcon icon={faUsers}/>
-          </a>
-        </li>
+        <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="/reason">
+                  <FontAwesomeIcon icon={faFolderPlus}/>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/register">
+                  <FontAwesomeIcon icon={faUserPlus}/>
+                </a>
+              </li>
+        </ul>
+
         }
         <li className="nav-item">
           <a

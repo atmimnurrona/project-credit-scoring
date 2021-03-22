@@ -1,5 +1,5 @@
 import React from "react";
-import {faCheckDouble} from "@fortawesome/free-solid-svg-icons";
+import {faCheckDouble, faUsers} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export default function Menu() {
@@ -43,36 +43,49 @@ export default function Menu() {
             {/* Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library */}
             
+            {/*<li className="nav-item has-treeview">*/}
+            {/*  <a className="nav-link">*/}
+            {/*    <i className="nav-icon fas fa-money-check" />*/}
+            {/*    <p>*/}
+            {/*      Customer*/}
+            {/*      <i className="fas fa-angle-left right" />*/}
+            {/*      /!*<span className="badge badge-info right">6</span>*!/*/}
+            {/*    </p>*/}
+            {/*  </a>*/}
+            {/*  <ul className="nav nav-treeview">*/}
+            {/*    <li className="nav-item">*/}
+            {/*      <a href="/customer/form" className="nav-link">*/}
+            {/*        <i className="far fa-circle nav-icon" />*/}
+            {/*        <p>Form Customer</p>*/}
+            {/*      </a>*/}
+            {/*    </li>*/}
+            {/*    <li className="nav-item">*/}
+            {/*      <a*/}
+            {/*        href="/customer"*/}
+            {/*        className="nav-link"*/}
+            {/*      >*/}
+            {/*        <i className="far fa-circle nav-icon" />*/}
+            {/*        <p>List Customer</p>*/}
+            {/*      </a>*/}
+            {/*    </li>*/}
+            {/*  </ul>*/}
+            {/*</li>*/}
+            {/*<li className="nav-item">*/}
+            {/*  <a className="nav-link" href="/users">*/}
+            {/*    <FontAwesomeIcon icon={faUsers}/>*/}
+            {/*  </a>*/}
+            {/*</li>*/}
             <li className="nav-item has-treeview">
-              <a className="nav-link">
-                <i className="nav-icon fas fa-money-check" />
+              <a href="/users" className="nav-link">
+                <i className="nav-icon fas fa-users" />
                 <p>
-                  Customer
-                  <i className="fas fa-angle-left right" />
-                  {/*<span className="badge badge-info right">6</span>*/}
+                  List Account
                 </p>
               </a>
-              <ul className="nav nav-treeview">
-                <li className="nav-item">
-                  <a href="/customer/form" className="nav-link">
-                    <i className="far fa-circle nav-icon" />
-                    <p>Form Customer</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    href="/customer"
-                    className="nav-link"
-                  >
-                    <i className="far fa-circle nav-icon" />
-                    <p>List Customer</p>
-                  </a>
-                </li>
-              </ul>
             </li>
             <li className="nav-item has-treeview">
               <a href="/customer/form" className="nav-link">
-                <i className="nav-icon fas fa-wallet" />
+                <i className="nav-icon fas fa-user-check" />
                 <p>
                   Form Customer
                 </p>
@@ -80,7 +93,7 @@ export default function Menu() {
             </li>
             <li className="nav-item has-treeview">
               <a href="/customer" className="nav-link">
-                <i className="nav-icon fas fa-wallet" />
+                <i className="nav-icon fas fa-list-alt" />
                 <p>
                   List Customer
                 </p>

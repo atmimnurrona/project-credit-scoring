@@ -13,6 +13,7 @@ import AccountList from "../pages/login/AccountList";
 import TransactionDetail from "../pages/transaction/TransactionDetail";
 import ReportList from "../pages/report/ReportList";
 import ReportDetail from "../pages/report/ReportDetail";
+import ReasonUse from "../pages/reasonUse/ReasonUse";
 
 const routes = [
     {
@@ -28,6 +29,11 @@ const routes = [
     {
         path: '/users/:id',
         component: <SignUp/>,
+        exact: true
+    },
+    {
+        path: '/reason',
+        component: <ReasonUse/>,
         exact: true
     },
     {

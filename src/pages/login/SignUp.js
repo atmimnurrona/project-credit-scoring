@@ -40,7 +40,7 @@ const SignUp = ({saveDispatch, error, saveAccount, users, update, isLoading}) =>
 
     useEffect(() => {
         if (saveAccount) {
-            history.push('/')
+            history.push('/users')
             // console.log("ini saved", saveAccount)
         }
     }, [saveAccount, history])
@@ -100,7 +100,7 @@ const SignUp = ({saveDispatch, error, saveAccount, users, update, isLoading}) =>
                         <div className="col-md-5 pr-lg-5 mb-5 mb-md-0">
                             <img src={undraw_Updated_resume_re_q1or} alt=""
                                  className="img-fluid mb-3 d-none d-md-block"/>
-                            <h1 style={{color: "#e42256", fontSize: "55px"}}>Create new account</h1>
+                            <h1 style={{color: "#e42256", fontSize: "55px"}}>Create Account</h1>
                         </div>
 
                         <div className="col-md-7 col-lg-6 ml-auto">

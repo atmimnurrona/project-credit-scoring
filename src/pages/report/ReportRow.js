@@ -1,24 +1,31 @@
 import React from 'react'
-import {Button} from "reactstrap";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faInfoCircle, faPencilAlt, faTrash} from "@fortawesome/free-solid-svg-icons";
 
-const ReportRow = ({data, number}) => {
+const ReportRow = () => {
     return (
 
         <tr>
             <td>1</td>
-            <td>eka</td>
-            <td>Non</td>
-            <td>approve</td>
-            <td>
-                <Button href={`#`} style={{background:"#e42256"}}>
-                    <FontAwesomeIcon icon={faInfoCircle}/>
-                </Button>
-            </td>
+            <td>Eka</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
         </tr>
     )
 }
 
 export default ReportRow;
-

@@ -10,8 +10,8 @@ import ReportRow from "./ReportRow";
 import ReportDetail from "./ReportDetail";
 
 function ReportList({
-    reports,
-    error
+                        reports,
+                        error
                     }) {
 
     const onReload = () => {
@@ -54,16 +54,35 @@ function ReportList({
                                                             </a>
                                                         </div>
                                                     </div>
-
                                                     <div className="card-body table-responsive p-0">
-                                                        <table className="table table-striped table-valign-middle">
+                                                        <table className="table table-bordered table-valign-middle">
                                                             <thead>
+                                                            <tr >
+                                                                <th colSpan="5"> Customer Data</th>
+                                                                <th colSpan="11">Transaction</th>
+                                                                <th colSpan="4">Approved</th>
+                                                            </tr>
                                                             <tr>
                                                                 <th>No</th>
                                                                 <th>Name</th>
+                                                                <th>Email</th>
+                                                                <th>Id Number</th>
+                                                                <th>Address</th>
                                                                 <th>Employee Type</th>
-                                                                <th>Approved</th>
-                                                                <th>Action</th>
+                                                                <th>Income</th>
+                                                                <th>Outcome</th>
+                                                                <th>Loan</th>
+                                                                <th>Interest Rate</th>
+                                                                <th>Tenor</th>
+                                                                <th>Main Loan</th>
+                                                                <th>Interest</th>
+                                                                <th>Installment Total</th>
+                                                                <th>Installment</th>
+                                                                <th>Credit ratio</th>
+                                                                <th>Finance Criteria</th>
+                                                                <th>Employee Criteria</th>
+                                                                <th>Submitted Date</th>
+                                                                <th>Approved Date</th>
                                                             </tr>
                                                             </thead>
                                                             <tbody>
@@ -73,8 +92,6 @@ function ReportList({
                                                             </tbody>
                                                         </table>
                                                     </div>
-                                                    <br/>
-                                                    <br/>
 
                                                 </div>
                                             </div>
@@ -82,8 +99,6 @@ function ReportList({
                                     </div>
                                 </div>
                             </div>
-
-                            <ReportDetail/>
                             <Footer/>
                         </Containers>
 

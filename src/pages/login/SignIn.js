@@ -174,14 +174,14 @@ const SignIn = ({loginData, isLoading, error, dispatchLoginAction}) => {
                                               style={{color: "#ffff"}}>SIGN IN</span>
                                 </Button>
                             </div>
-                            <div className="text-center w-100">
-                                <br/>
-                                <p className="text-muted font-weight-bold">
-                                    Forgot Password?
-                                    <a href="#" className="text-primary ml-2">Click here</a>
-                                </p>
-                                <hr/>
-                            </div>
+                            {/*<div className="text-center w-100">*/}
+                            {/*    <br/>*/}
+                            {/*    <p className="text-muted font-weight-bold">*/}
+                            {/*        Forgot Password?*/}
+                            {/*        <a href="#" className="text-primary ml-2">Click here</a>*/}
+                            {/*    </p>*/}
+                            {/*    <hr/>*/}
+                            {/*</div>*/}
 
                         </div>
                     </form>

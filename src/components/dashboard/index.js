@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from "./Header";
-import Content from "./Content";
 import Menu from "./Menu";
 import Footer from "./Footer";
+import Content from "./Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ListCustomer from "../../pages/customer/listCustomer";
 import TransactionList from "../../pages/transaction/transactionList";
