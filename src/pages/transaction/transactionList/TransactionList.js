@@ -60,19 +60,19 @@ function TransactionList({
 
                                                     <div className="card-body table-responsive p-0">
                                                         <table className="table table-striped table-valign-middle">
-                                                            <thead>
+                                                            <thead style={{textAlign: "left"}}>
                                                             <tr>
                                                                 <th>No</th>
+                                                                <th>Submitter</th>
                                                                 <th>Name</th>
                                                                 <th>Employee Type</th>
-                                                                <th>Need Type</th>
                                                                 <th>Loan</th>
                                                                 <th>Tenor</th>
                                                                 <th>Interest Rate</th>
                                                                 <th>Action</th>
                                                             </tr>
                                                             </thead>
-                                                            <tbody>
+                                                            <tbody style={{textAlign: "left"}}>
                                                             {
                                                                 !isLoading ?
                                                                     transactions?.list?.map((e, i) => {

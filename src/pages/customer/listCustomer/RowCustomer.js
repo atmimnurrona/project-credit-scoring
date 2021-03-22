@@ -6,8 +6,8 @@ const CustomerRow = ({data, onUpdate, number}) => {
             <td>{number}</td>
             <td>{data.name}</td>
             <td>{data.idNumber} </td>
-            <td>{data.email}</td>
             <td>{data.employeeType}</td>
+            <td>{data.submitter}</td>
             <td>
                 <a onClick={data} href={`/customer/${data.id}/detail`} className="text-muted">
                     <i className="fas fa-info-circle" />

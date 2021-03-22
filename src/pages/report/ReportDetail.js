@@ -160,62 +160,6 @@ function ReportDetail() {
                                                                 <Col xs="6" sm="4">Approved Date</Col>
                                                                 <Col sm="4"> </Col>
                                                             </Row>
-
-                                                            {/*<tbody>*/}
-
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Notes</td>*/}
-                                                            {/*    <td></td>*/}
-                                                            {/*</tr>*/}
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Income</td>*/}
-                                                            {/*    <td></td>*/}
-                                                            {/*</tr>*/}
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Outcome</td>*/}
-                                                            {/*    <td></td>*/}
-                                                            {/*</tr>*/}
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Loan</td>*/}
-                                                            {/*    <td></td>*/}
-                                                            {/*</tr>*/}
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Tenor</td>*/}
-                                                            {/*    <td></td>*/}
-                                                            {/*</tr>*/}
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Interest Rate</td>*/}
-                                                            {/*    <td></td>*/}
-                                                            {/*</tr>*/}
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Main Loan</td>*/}
-                                                            {/*    <td></td>*/}
-                                                            {/*</tr>*/}
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Interest</td>*/}
-                                                            {/*    <td></td>*/}
-                                                            {/*</tr>*/}
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Installment Total</td>*/}
-                                                            {/*    <td></td>*/}
-                                                            {/*</tr>*/}
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Installment</td>*/}
-                                                            {/*    <td></td>*/}
-                                                            {/*</tr>*/}
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Credit ratio</td>*/}
-                                                            {/*    <td></td>*/}
-                                                            {/*</tr>*/}
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Finance Criteria</td>*/}
-                                                            {/*    <td></td>*/}
-                                                            {/*</tr>*/}
-                                                            {/*<tr>*/}
-                                                            {/*    <td>Employee Criteria</td>*/}
-                                                            {/*    <td></td>*/}
-                                                            {/*</tr>*/}
-                                                            {/*</tbody>*/}
                                                         </Table>
                                                     </div>
                                                 </div>

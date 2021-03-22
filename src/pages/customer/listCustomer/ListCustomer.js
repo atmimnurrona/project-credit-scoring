@@ -59,17 +59,18 @@ function CustomerList({
                                                     </div>
                                                     <div className="card-body table-responsive p-0">
                                                         <table className="table table-striped table-valign-middle">
-                                                            <thead>
+                                                            <thead style={{textAlign: "left"}}>
                                                             <tr>
                                                                 <th>Number</th>
-                                                                <th>Full Name</th>
+                                                                {/*<th>Submitter</th>*/}
+                                                                <th>Customer Name</th>
                                                                 <th>ID Card</th>
-                                                                <th>Email</th>
                                                                 <th>Employee Type</th>
+                                                                <th>Submitter</th>
                                                                 <th>Action</th>
                                                             </tr>
                                                             </thead>
-                                                            <tbody>
+                                                            <tbody style={{textAlign: "left"}}>
                                                             {
                                                                 !isLoading ?
                                                                     customers?.list?.map((e, i) => {

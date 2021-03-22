@@ -77,7 +77,7 @@ function CustomerDetail({isLoading, customer, findCustomerByIdAction}) {
                                                                 {/*    <th>Value</th>*/}
                                                                 {/*</tr>*/}
                                                                 {/*</thead>*/}
-                                                                <tbody>
+                                                                <tbody style={{textAlign: "left"}}>
                                                                 <tr>
                                                                     <td><FontAwesomeIcon icon={faUser}/></td>
                                                                     <td>{customer.name}</td>
@@ -96,7 +96,7 @@ function CustomerDetail({isLoading, customer, findCustomerByIdAction}) {
                                                                 </tr>
                                                                 {customer.employeeType == "CONTRACT"
                                                                 &&
-                                                                    <y>
+                                                                    <>
                                                                         <tr>
                                                                             <td>Contract Length</td>
                                                                             <td>{customer.contractLength}</td>
@@ -105,7 +105,7 @@ function CustomerDetail({isLoading, customer, findCustomerByIdAction}) {
                                                                             <td>Contract Start</td>
                                                                             <td>{customer.contractStart}</td>
                                                                         </tr>
-                                                                    </y>
+                                                                    </>
                                                                 }
                                                                         <tr>
                                                                             <td>ID Card Photo</td>

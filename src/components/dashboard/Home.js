@@ -26,26 +26,29 @@ export default function Content() {
                             <div className="card">
 
                                 <div className="card-body">
-                                    <div className="d-flex justify-content-between align-items-center border-bottom mb-3">
+
+                                    <div
+                                        className="d-flex justify-content-between align-items-center border-bottom mb-3">
                                         <p className="text-success text-xl">
-                                            <i className="ion ion-ios-people-outline" />
+                                            <i className="ion ion-ios-people-outline"/>
                                         </p>
                                         <p className="d-flex flex-column text-right">
                       <span className="font-weight-bold">
-                        <i className="ion ion-android-arrow-up text-success" />{" "}
+                        {/*<i className="ion ion-android-arrow-up text-success"/>{" "}*/}
                           12%
                       </span>
                                             <span className="text-muted">Customer</span>
                                         </p>
                                     </div>
                                     {/* /.d-flex */}
-                                    <div className="d-flex justify-content-between align-items-center border-bottom mb-3">
+                                    <div
+                                        className="d-flex justify-content-between align-items-center border-bottom mb-3">
                                         <p className="text-warning text-xl">
-                                            <i className="ion ion-ios-cart-outline" />
+                                            <i className="ion ion-ios-cart-outline"/>
                                         </p>
                                         <p className="d-flex flex-column text-right">
                       <span className="font-weight-bold">
-                        <i className="ion ion-android-arrow-up text-warning" />{" "}
+                        {/*<i className="ion ion-android-arrow-up text-warning"/>{" "}*/}
                           0.8%
                       </span>
                                             <span className="text-muted">Transaction</span>
@@ -54,11 +57,11 @@ export default function Content() {
                                     {/* /.d-flex */}
                                     <div className="d-flex justify-content-between align-items-center mb-0">
                                         <p className="text-danger text-xl">
-                                            <i className="ion ion-ios-people-outline" />
+                                            <i className="ion ion-ios-list-outline"/>
                                         </p>
                                         <p className="d-flex flex-column text-right">
                       <span className="font-weight-bold">
-                        <i className="ion ion-android-arrow-down text-danger" />{" "}
+                        {/*<i className="ion ion-android-arrow-down text-danger"/>{" "}*/}
                           1%
                       </span>
                                             <span className="text-muted">Report</span>

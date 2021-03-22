@@ -93,20 +93,6 @@ const TransactionForm = ({savedTransaction, isLoading, error, saveTransactionAct
                                                 {!isLoading ?
                                                     <Form onSubmit={handleSubmit}>
                                                         <FormGroup row>
-                                                            <Label for="notes" sm={2}
-                                                                   style={{textAlign: "left"}}>Note</Label>
-                                                            <Col sm={10}>
-                                                                <Input
-                                                                    required
-                                                                    onChange={handleChange}
-                                                                    value={data?.notes || ''}
-                                                                    type="text"
-                                                                    name="notes"
-                                                                    id="notes"
-                                                                    placeholder="input note"/>
-                                                            </Col>
-                                                        </FormGroup>
-                                                        <FormGroup row>
                                                             <Label for="income" sm={2}
                                                                    style={{textAlign: "left"}}>Income</Label>
                                                             <Col sm={10}>
@@ -200,6 +186,20 @@ const TransactionForm = ({savedTransaction, isLoading, error, saveTransactionAct
                                                                     placeholder="Select Need Type"
                                                                     handleDropdown={handleNeed}
                                                                 />
+                                                            </Col>
+                                                        </FormGroup>
+                                                        <FormGroup row>
+                                                            <Label for="notes" sm={2}
+                                                                   style={{textAlign: "left"}}>Note</Label>
+                                                            <Col sm={10}>
+                                                                <Input
+                                                                    required
+                                                                    onChange={handleChange}
+                                                                    value={data?.notes || ''}
+                                                                    type="text"
+                                                                    name="notes"
+                                                                    id="notes"
+                                                                    placeholder="input note"/>
                                                             </Col>
                                                         </FormGroup>
                                                         <FormGroup check row>
